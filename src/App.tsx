@@ -1,15 +1,15 @@
 import React from "react";
 import { colors } from './styles/defaults'
-import GlobalStyle from './styles/GlobalStyle';
 
+import StyledApp from './components/StyledApp';
 import InformationSection from './components/InformationSection';
 import ImageSection from './components/ImageSection';
 import ImageTile from "./components/ImageTile";
 
 
 const App = () => {
-  return <div className="App">
-    <GlobalStyle></GlobalStyle>
+  return <StyledApp>
+      
     <InformationSection background={colors.skyblue}>
       <h1>#Onefortheocean</h1>
     </InformationSection>
@@ -111,9 +111,8 @@ const App = () => {
     
     <InformationSection background={colors.skyblue}>
       <img src="./../assets/images/earth-sad.png" alt=""></img>
-
     </InformationSection>
-  </div>;
+  </StyledApp>;
 };
 
 export default App;

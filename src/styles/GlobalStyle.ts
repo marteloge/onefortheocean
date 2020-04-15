@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { colors, fonts } from './defaults';
 
-import { calculateResponsiveFontSize } from '../styles/helpers';
+import { calculateResponsiveSize } from '../styles/helpers';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -14,13 +14,13 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     background-color: ${ colors.pearl };
     font-family: ${ fonts.annie };
-    font-size: ${ calculateResponsiveFontSize(14, 16) };
+    font-size: ${ calculateResponsiveSize(14, 16) };
     line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));      
   }
 
   h1 {
     font-weight: 200;
-    font-size: ${ calculateResponsiveFontSize(42, 60) };
+    font-size: ${ calculateResponsiveSize(42, 60) };
     line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));      
   }
 
@@ -33,44 +33,6 @@ const GlobalStyle = createGlobalStyle`
   h3 {
     font-weight: 200;
     line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));      
-
-  }
-
-  .App {
-    //CREATE APP AS A STYLED APP
-    
-    /* display: grid;
-
-
-    grid-template-columns: auto 300px auto;
-    grid-column-start: 2; */
-
-    /* height: "100%"; */
-    /* margin: 0 20%;
-    
-    @media (max-width: 600px) {
-      margin: 0;
-    }
-
-    @media (min-width: 601px) {
-      margin: 0 10%;
-    }
-
-    @media (min-width: 750px) {
-      margin: 0 15%;
-    }
-    
-    @media (min-width: 950px) {
-      margin: 0 20%;
-    }
-
-    @media (min-width: 1050px) {
-      margin: 0 25%;
-    }
-
-    @media (min-width: 1250px) {
-      margin: 0 30%;
-    } */
   }
 `;
 

@@ -11,6 +11,7 @@ const InformationSection = styled.section<Props>`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border-radius: 5px;
 
   img {
     max-width: 100px;
@@ -19,6 +20,7 @@ const InformationSection = styled.section<Props>`
 
     @media (max-width: 600px) {
       max-width: 70px;
+      margin: 0 5px;
     }
   }
 

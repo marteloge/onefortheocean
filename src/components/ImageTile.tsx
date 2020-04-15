@@ -1,18 +1,17 @@
 import styled from 'styled-components';
 
+import { calculateResponsiveSize } from '../styles/helpers';
+
 const ImageTile = styled.div<{background: string}>`
+  background: ${props => props.background};
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 24%;
-  background: ${props => props.background};
+  min-height: ${calculateResponsiveSize(70, 110)};
+  border-radius: 5px;
   
   img {
-    width: 40%;
-    padding: 20%;
-    max-width: 100px;
-    float: left;
+    max-width: ${calculateResponsiveSize(40, 70)};
   }
 `;
 
