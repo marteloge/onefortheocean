@@ -19,8 +19,8 @@ export const Menu = (props: Props) => {
       <StyledLink to="/contact">
         <FormattedMessage id="route.contact.title" />
       </StyledLink>
-      <StyledLink to="/credits">
-        <FormattedMessage id="route.credits.title" />
+      <StyledLink to="/thanks">
+        <FormattedMessage id="route.gratitude.title" />
       </StyledLink>
     </StyledMenu>
   );

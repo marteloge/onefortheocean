@@ -11,6 +11,8 @@ import { useLocalStorage } from './hooks';
 import { Home } from './components/Home/Home';
 import { GlobalStyle } from './global';
 import Contact from './components/Contact/Contact';
+import Gratitude from './components/Gratitude/Gratitude';
+import About from './components/About/About';
 
 const App = () => {
   const [locale] = useLocalStorage<SupportedLanguage>('lang', 'en');
@@ -22,7 +24,9 @@ const App = () => {
         <GlobalStyle />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
+          <Route path="/thanks" component={Gratitude} />
         </Switch>
         <Burger open={open} setOpen={setOpen} />
         <Menu open={open} />
