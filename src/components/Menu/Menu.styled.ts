@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { colors, calculateResponsiveSize } from "../../global";
+import { colors, calculateResponsiveSize } from '../../global';
+import { NavLink } from 'react-router-dom';
 
 export const StyledMenu = styled.nav<{ open: boolean }>`
   position: absolute;
@@ -10,27 +11,31 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   width: 30vw;
   padding-left: 2em;
   padding-top: 20vh;
+  background-color: ${colors.lightbrown};
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 600px) {
     width: 100%;
   }
 
-  background-color: ${colors.lightbrown};
-
-  display: flex;
-  flex-direction: column;
-
   transition: transform 0.3s ease-in-out;
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
+`;
 
-  a {
-    color: ${colors.pearl};
+export const StyledLink = styled(NavLink)`
+  text-decoration: none;
+  color: ${colors.pearl};
+  font-size: ${calculateResponsiveSize(30, 50)};
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+
+  &.active {
+    color: ${colors.yellowmellow};
     text-decoration: underline;
-    font-size: ${calculateResponsiveSize(30, 50)};
-    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
   }
 
-  a:hover {
+  :hover {
     color: ${colors.yellowmellow};
+    text-decoration: underline;
   }
 `;

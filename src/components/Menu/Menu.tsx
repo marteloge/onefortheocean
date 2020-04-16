@@ -1,8 +1,7 @@
-import React from "react";
-import { StyledMenu } from "./Menu.styled";
+import React from 'react';
+import { StyledMenu, StyledLink } from './Menu.styled';
 
-import { Link } from "react-router-dom";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage } from 'react-intl';
 
 export type Props = {
   open: boolean;
@@ -11,18 +10,18 @@ export type Props = {
 export const Menu = (props: Props) => {
   return (
     <StyledMenu open={props.open}>
-      <Link to="/">
+      <StyledLink to="/" exact={true}>
         <FormattedMessage id="route.home.title" />
-      </Link>
-      <Link to="/about">
+      </StyledLink>
+      <StyledLink to="/about">
         <FormattedMessage id="route.about.title" />
-      </Link>
-      <Link to="/contact">
+      </StyledLink>
+      <StyledLink to="/contact">
         <FormattedMessage id="route.contact.title" />
-      </Link>
-      <Link to="/credits">
+      </StyledLink>
+      <StyledLink to="/credits">
         <FormattedMessage id="route.credits.title" />
-      </Link>
+      </StyledLink>
     </StyledMenu>
   );
 };
