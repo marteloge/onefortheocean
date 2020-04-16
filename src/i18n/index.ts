@@ -5,7 +5,7 @@ const languages = {
   no, en
 }
 
-export type SupportedLanguage = "en" | "no";
+export type SupportedLanguage = 'en' | 'no';
 
 export const getMessage = (locale: SupportedLanguage) : { [key: string] : string } =>
   languages[locale];

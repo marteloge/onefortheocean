@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-interface Props {
+type Props = {
   background: string
 };
 
@@ -31,7 +31,6 @@ const InformationSection = styled.section<Props>`
   h1, h2, h3, p, img {
     margin: 0 15px;
   }
-
 `;
 
 export default InformationSection;

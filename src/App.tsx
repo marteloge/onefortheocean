@@ -1,21 +1,23 @@
-import React, { useState } from "react";
-import { colors } from './styles/defaults'
-
+import React from "react";
 import { IntlProvider, FormattedMessage } from 'react-intl';
+
+import { colors } from './styles/defaults'
+import { getMessage, SupportedLanguage } from './i18n';
+import { useLocalStorage } from './hooks/UseLocalStorage';
+
 import StyledApp from './components/StyledApp';
 import InformationSection from './components/InformationSection';
 import ImageSection from './components/ImageSection';
 import ImageTile from "./components/ImageTile";
-import { getMessage, SupportedLanguage } from "./i18n";
 
 const App = () => {
-  const [locale] = useState<SupportedLanguage>("en");
+  const [locale] = useLocalStorage<SupportedLanguage>('lang', 'en');
 
   return <IntlProvider locale={locale} messages={ getMessage(locale) }>
     <StyledApp>
-      {/* <button onClick={() => setLocale("no")} /> */}
+      {/* <button onClick={() => setLocale('en')} /> */}
       <InformationSection background={colors.skyblue}>
-        <h1><FormattedMessage id="header"></FormattedMessage></h1>
+        <h1><FormattedMessage id="header"/></h1>
       </InformationSection>
       
       <ImageSection>
@@ -38,13 +40,8 @@ const App = () => {
           <img src="./../assets/images/trash.png" alt=""></img>
         </div>
         <div>
-          <h2>Let's save the ocean!</h2>
-          <p>The virus has changed the world we used to know. The world
-            is changing and we are able to shape our future. While sitting
-            home and doing nothing, why not help the planet while we humans heal?
-            Go out moving and pick up some garbage befor it ends up in the ocean.
-            Save a turtle - save a whale - save the ocean!
-          </p>
+          <h2><FormattedMessage id="information.section.trash.header" /></h2>
+          <p><FormattedMessage id="information.section.trash.paragraph" /></p>
         </div>
       </InformationSection>
 
@@ -65,7 +62,7 @@ const App = () => {
       
       <InformationSection background={colors.lightpink}>
         <img src="./../assets/images/heart.png" alt=""></img>
-        <h3>#onefortheocean</h3>
+        <h3><FormattedMessage id="hashtag" /></h3>
       </InformationSection>
 
       <ImageSection>
@@ -88,13 +85,8 @@ const App = () => {
           <img src="./../assets/images/recycle.png" alt=""></img>        
         </div>
         <div>
-          <h2>Let´s get to work!</h2>
-          <p>
-            #1 Go out to get some fresh air <br></br>
-            #2 Bring a bag <br></br>
-            #3 Fill your bag with garbage <br></br>
-            #4 Keep distance!
-          </p>
+          <h2><FormattedMessage id="information.section.recycle.header" /></h2>
+          <p><FormattedMessage id="information.section.recycle.paragraph" /></p>
         </div>
       </InformationSection>
 
