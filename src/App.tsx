@@ -9,6 +9,7 @@ import { Burger } from './components/Burger/Burger';
 import { getMessage, SupportedLanguage } from './i18n';
 import { useLocalStorage } from './hooks';
 import { Home } from "./components/Home/Home";
+import { GlobalStyle } from './global';
 
 const App = () => {
   const [locale] = useLocalStorage<SupportedLanguage>('lang', 'en');
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <Router>
       <IntlProvider locale={locale} messages={ getMessage(locale) }>
+        <GlobalStyle/>
         <Switch>
           <Route exact path="/" component={Home} />
         </Switch>

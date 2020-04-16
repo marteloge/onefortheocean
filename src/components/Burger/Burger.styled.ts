@@ -2,19 +2,16 @@ import styled from "styled-components";
 import { colors } from '../../global';
 
 export const StyledBurger = styled.button<{open: boolean}>`
-  top: 5%;
-  left: 2rem;
-  width: 50px;
-  height: 50px;
+  top: 4%;
+  left: 4%;
+  width: 2rem;
+  height: 2rem;
   position: absolute;
   background: transparent;
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  
-  width: 2rem;
-  height: 2rem;
 
   border: none;
   cursor: pointer;
@@ -23,6 +20,16 @@ export const StyledBurger = styled.button<{open: boolean}>`
 
   &:focus {
     outline: none;
+  }
+
+  :hover {
+    div {
+      background-color: ${({ open }) => (open ? colors.yellowmellow : colors.mediumblue )};
+      
+      @media (max-width: 600px) {
+        background-color: ${({ open }) => (open ? colors.yellowmellow : colors.lightbrown )}; 
+      }
+    }   
   }
 
   div {
@@ -34,7 +41,14 @@ export const StyledBurger = styled.button<{open: boolean}>`
     transform-origin: 1px;
     background-color: white;
 
-    background-color: ${({ open }) => (open ? colors.pearl : colors.lightbrown )}; 
+    background-color: ${({ open }) => (open ? colors.pearl : colors.mediumblue )}; 
+
+
+    @media (min-width: 600px) {
+      background-color: ${({ open }) => (open ? colors.pearl : colors.lightbrown )}; 
+    }
+
+    
 
     :first-child {
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};

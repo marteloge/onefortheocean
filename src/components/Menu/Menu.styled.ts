@@ -7,9 +7,13 @@ export const StyledMenu = styled.nav<{open: boolean}>`
   top: 0;
   left: 0;
   height: 100vh;
-  width: 20vw;
+  width: 30vw;
   padding-left:2em;
   padding-top:20vh;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 
   background-color: ${colors.lightbrown};
 
@@ -21,7 +25,7 @@ export const StyledMenu = styled.nav<{open: boolean}>`
 
   a {
     color: ${ colors.pearl };
-    text-decoration: none;
+    text-decoration: underline;
     font-size: ${ calculateResponsiveSize(30, 50) };
     line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));      
   }
