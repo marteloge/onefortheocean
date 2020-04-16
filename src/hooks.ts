@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export function useLocalStorage<T>(
   key: string,
@@ -9,7 +9,6 @@ export function useLocalStorage<T>(
       const localValue = window.localStorage.getItem(key);
       return localValue ? JSON.parse(localValue) : initialValue;
     } catch (error) {
-      console.log(error);
       return initialValue;
     }
   });

@@ -6,7 +6,7 @@ import { IntlProvider } from 'react-intl';
 import { Menu } from './components/Menu/Menu';
 import { Burger } from './components/Burger/Burger';
 
-import { getMessage, SupportedLanguage } from './i18n';
+import { getMessage, SupportedLanguage, languages } from './i18n';
 import { useLocalStorage } from './hooks';
 import { Home } from './components/Home/Home';
 import { GlobalStyle } from './global';
@@ -15,7 +15,7 @@ import Gratitude from './components/Gratitude/Gratitude';
 import About from './components/About/About';
 
 const App = () => {
-  const [locale] = useLocalStorage<SupportedLanguage>('lang', 'en');
+  const [locale, setLocale] = useLocalStorage<SupportedLanguage>('lang', 'en');
   const [open, setOpen] = useState(false);
 
   return (
@@ -29,7 +29,12 @@ const App = () => {
           <Route path="/thanks" component={Gratitude} />
         </Switch>
         <Burger open={open} setOpen={setOpen} />
-        <Menu open={open} />
+        <Menu
+          open={open}
+          locale={locale}
+          setLocale={setLocale}
+          languages={Object.keys(languages)}
+        />
       </IntlProvider>
     </Router>
   );

@@ -1,12 +1,12 @@
-import no from './lang_no';
+import nb from './lang_nb';
 import en from './lang_en';
 
-const languages = {
-  no,
+export const languages = {
+  nb,
   en,
 };
 
-export type SupportedLanguage = 'en' | 'no';
+export type SupportedLanguage = 'nb' | 'en';
 
 export const getMessage = (
   locale: SupportedLanguage
