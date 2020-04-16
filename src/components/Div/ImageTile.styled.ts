@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { calculateResponsiveSize } from '../styles/helpers';
+import { calculateResponsiveSize } from '../../global';
 
 const ImageTile = styled.div<{background: string}>`
   background: ${props => props.background};

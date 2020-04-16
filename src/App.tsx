@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { IntlProvider, FormattedMessage } from 'react-intl';
 
-import { colors } from './styles/defaults'
+import { colors } from './global'
 import { getMessage, SupportedLanguage } from './i18n';
-import { useLocalStorage } from './hooks/UseLocalStorage';
+import { useLocalStorage } from './hooks';
 
 import StyledApp from './components/StyledApp';
-import InformationSection from './components/InformationSection';
-import ImageSection from './components/ImageSection';
-import ImageTile from "./components/ImageTile";
+import InformationSection from './components/Section/InformationSection.styled';
+import ImageSection from './components/Section/ImageSection.styled';
+import ImageTile from "./components/Div/ImageTile.styled";
+import { Menu } from './components/Menu/Menu';
+import { Burger } from './components/Burger/Burger';
 
 const App = () => {
   const [locale] = useLocalStorage<SupportedLanguage>('lang', 'en');
+  const [open, setOpen] = useState(false);
+
+  console.log(open);
 
   return <IntlProvider locale={locale} messages={ getMessage(locale) }>
     <StyledApp>
@@ -108,6 +113,8 @@ const App = () => {
       <InformationSection background={colors.skyblue}>
         <img src="./../assets/images/earth-sad.png" alt=""></img>
       </InformationSection>
+      <Burger open={open} setOpen={setOpen} />
+      <Menu open={open} />
     </StyledApp></IntlProvider>;
 };
 
