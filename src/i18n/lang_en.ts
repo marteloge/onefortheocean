@@ -7,7 +7,12 @@ export default {
     "nothing, why not help the planet while we humans heal? Go out moving and pick up some" +
     "garbage befor it ends up in the ocean. Save a turtle - save a whale - save the ocean!",
   "information.section.recycle.header": "Let´s get to work!",
-  "information.section.recycle.paragraph": "#1 Go out to get some fresh air #2 Bring a bag #3 Fill your bag with garbage #4 Keep distance!"
+  "information.section.recycle.paragraph": "#1 Go out to get some fresh air #2 Bring a bag" +
+    " #3 Fill your bag with garbage #4 Keep distance!",
+  "route.home.title": "Home",
+  "route.contact.title": "Contact",
+  "route.about.title": "About us",
+  "route.credits.title": "Attributes"
 };
 
 

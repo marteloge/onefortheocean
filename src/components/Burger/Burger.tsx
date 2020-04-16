@@ -6,14 +6,10 @@ export type Props = {
   setOpen: Function
 }
 
-export const Burger = ( props: Props ) => {
-  console.log("from burger", open)
-  return (
-    <StyledBurger open={props.open} onClick={() => props.setOpen(!props.open)} >
-      <div />
-      <div />
-      <div />
-    </StyledBurger>
-  );
-};
+export const Burger = ( props: Props ) =>
+  <StyledBurger open={props.open} onClick={() => props.setOpen(!props.open)} >
+    <div />
+    <div />
+    <div />
+  </StyledBurger>;
 

@@ -9,7 +9,6 @@ export const StyledBurger = styled.button<{open: boolean}>`
   position: absolute;
   background: transparent;
 
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
