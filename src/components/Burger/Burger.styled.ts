@@ -6,8 +6,9 @@ export const StyledBurger = styled.button<{ open: boolean }>`
   left: 4%;
   width: 2rem;
   height: 2rem;
-  position: absolute;
+  position: fixed;
   background: transparent;
+  z-index: 1;
 
   display: flex;
   flex-direction: column;

@@ -4,7 +4,7 @@ import { colors, calculateResponsiveSize } from '../../global';
 import { NavLink } from 'react-router-dom';
 
 export const StyledMenu = styled.nav<{ open: boolean }>`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
@@ -14,6 +14,7 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   background-color: ${colors.lightbrown};
   display: flex;
   flex-direction: column;
+  z-index: 1;
 
   @media (max-width: 600px) {
     width: 100%;
