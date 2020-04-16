@@ -1523,7 +1523,7 @@
     "@types/react" "*"
     "@types/react-router" "*"
 
-"@types/react-router@*", "@types/react-router@^5.1.5":
+"@types/react-router@*":
   version "5.1.5"
   resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-5.1.5.tgz#7b2f9b7cc3d350e92664c4e38c0ef529286fe628"
   integrity sha512-RZPdCtZympi6X7EkGyaU7ISiAujDYTWgqMF9owE3P6efITw27IWQykcti0BvA5h4Mu1LLl5rxrpO3r8kHyUZ/Q==
@@ -8884,7 +8884,7 @@ prepend-http@^1.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
-prettier@^2.0.4:
+prettier@2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.4.tgz#2d1bae173e355996ee355ec9830a7a1ee05457ef"
   integrity sha512-SVJIQ51spzFDvh4fIbCLvciiDMCrRhlN3mbZvv/+ycjvmF5E73bKdGfU8QDLNmjYJf+lsGnDBC4UUnvTe5OO0w==
@@ -9204,7 +9204,7 @@ react-router-dom@^5.1.2:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-router@5.1.2, react-router@^5.1.2:
+react-router@5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-5.1.2.tgz#6ea51d789cb36a6be1ba5f7c0d48dd9e817d3418"
   integrity sha512-yjEuMFy1ONK246B+rsa0cUam5OeAQ8pyclRDgpxuSCrAlJ1qN9uZ5IgyKC7gQg0w8OM50NXHEegPh/ks9YuR2A==

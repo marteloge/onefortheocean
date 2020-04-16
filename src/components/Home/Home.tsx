@@ -1,15 +1,22 @@
 import React from "react";
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from "react-intl";
 
-import { colors } from '../../global';
-import { StyledHome, ImageTile, ImageSection, InformationSection} from './Home.styled';
+import { colors } from "../../global";
+import {
+  StyledHome,
+  ImageTile,
+  ImageSection,
+  InformationSection,
+} from "./Home.styled";
 
-export const Home = () =>
+export const Home = () => (
   <StyledHome>
     <InformationSection background={colors.skyblue}>
-      <h1><FormattedMessage id="header"/></h1>
+      <h1>
+        <FormattedMessage id="header" />
+      </h1>
     </InformationSection>
-        
+
     <ImageSection>
       <ImageTile background={colors.peach}>
         <img src="./../assets/images/coral.png" alt=""></img>
@@ -30,8 +37,12 @@ export const Home = () =>
         <img src="./../assets/images/trash.png" alt=""></img>
       </div>
       <div>
-        <h2><FormattedMessage id="information.section.trash.header" /></h2>
-        <p><FormattedMessage id="information.section.trash.paragraph" /></p>
+        <h2>
+          <FormattedMessage id="information.section.trash.header" />
+        </h2>
+        <p>
+          <FormattedMessage id="information.section.trash.paragraph" />
+        </p>
       </div>
     </InformationSection>
 
@@ -49,10 +60,12 @@ export const Home = () =>
         <img src="./../assets/images/dolphin2.png" alt=""></img>
       </ImageTile>
     </ImageSection>
-    
+
     <InformationSection background={colors.lightpink}>
       <img src="./../assets/images/heart.png" alt=""></img>
-      <h3><FormattedMessage id="hashtag" /></h3>
+      <h3>
+        <FormattedMessage id="hashtag" />
+      </h3>
     </InformationSection>
 
     <ImageSection>
@@ -69,14 +82,18 @@ export const Home = () =>
         <img src="./../assets/images/octopus.png" alt=""></img>
       </ImageTile>
     </ImageSection>
-    
+
     <InformationSection background={colors.seagreen}>
       <div>
-        <img src="./../assets/images/recycle.png" alt=""></img>        
+        <img src="./../assets/images/recycle.png" alt=""></img>
       </div>
       <div>
-        <h2><FormattedMessage id="information.section.recycle.header" /></h2>
-        <p><FormattedMessage id="information.section.recycle.paragraph" /></p>
+        <h2>
+          <FormattedMessage id="information.section.recycle.header" />
+        </h2>
+        <p>
+          <FormattedMessage id="information.section.recycle.paragraph" />
+        </p>
       </div>
     </InformationSection>
 
@@ -94,8 +111,9 @@ export const Home = () =>
         <img src="./../assets/images/lobster2.png" alt=""></img>
       </ImageTile>
     </ImageSection>
-        
+
     <InformationSection background={colors.skyblue}>
       <img src="./../assets/images/earth-sad.png" alt=""></img>
     </InformationSection>
-  </StyledHome>;
+  </StyledHome>
+);

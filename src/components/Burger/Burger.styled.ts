@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import { colors } from '../../global';
 
-export const StyledBurger = styled.button<{open: boolean}>`
+export const StyledBurger = styled.button<{ open: boolean }>`
   top: 4%;
   left: 4%;
   width: 2rem;
@@ -24,12 +24,14 @@ export const StyledBurger = styled.button<{open: boolean}>`
 
   :hover {
     div {
-      background-color: ${({ open }) => (open ? colors.yellowmellow : colors.mediumblue )};
-      
+      background-color: ${({ open }) =>
+        open ? colors.yellowmellow : colors.mediumblue};
+
       @media (max-width: 600px) {
-        background-color: ${({ open }) => (open ? colors.yellowmellow : colors.lightbrown )}; 
+        background-color: ${({ open }) =>
+          open ? colors.yellowmellow : colors.lightbrown};
       }
-    }   
+    }
   }
 
   div {
@@ -41,26 +43,25 @@ export const StyledBurger = styled.button<{open: boolean}>`
     transform-origin: 1px;
     background-color: white;
 
-    background-color: ${({ open }) => (open ? colors.pearl : colors.mediumblue )}; 
-
+    background-color: ${({ open }) =>
+      open ? colors.pearl : colors.mediumblue};
 
     @media (min-width: 600px) {
-      background-color: ${({ open }) => (open ? colors.pearl : colors.lightbrown )}; 
+      background-color: ${({ open }) =>
+        open ? colors.pearl : colors.lightbrown};
     }
 
-    
-
     :first-child {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
     }
 
     :nth-child(2) {
-      opacity: ${({ open }) => (open ? "0" : "1")};
-      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
+      opacity: ${({ open }) => (open ? '0' : '1')};
+      transform: ${({ open }) => (open ? 'translateX(20px)' : 'translateX(0)')};
     }
 
     :nth-child(3) {
-      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
 `;

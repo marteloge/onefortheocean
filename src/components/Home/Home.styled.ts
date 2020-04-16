@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { calculateResponsiveSize } from  '../../global'
+import { calculateResponsiveSize } from "../../global";
 type Props = {
-  background: string
+  background: string;
 };
 
 export const StyledHome = styled.div`
@@ -11,15 +11,15 @@ export const StyledHome = styled.div`
   grid-template-rows: auto;
   justify-content: center;
   row-gap: 10px;
-  
+
   @media (max-width: 600px) {
     grid-template-columns: 100%;
   }
 `;
 
-export const IconSection = styled.section<{background: string}>`
+export const IconSection = styled.section<{ background: string }>`
   width: 100%;
-  background: ${props => props.background};
+  background: ${(props) => props.background};
 `;
 
 export const ImageSection = styled.section`
@@ -33,14 +33,14 @@ export const ImageSection = styled.section`
   }
 `;
 
-export const ImageTile = styled.div<{background: string}>`
-  background: ${props => props.background};
+export const ImageTile = styled.div<{ background: string }>`
+  background: ${(props) => props.background};
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: ${calculateResponsiveSize(70, 110)};
   border-radius: 5px;
-  
+
   img {
     max-width: ${calculateResponsiveSize(40, 70)};
   }
@@ -49,7 +49,7 @@ export const ImageTile = styled.div<{background: string}>`
 export const InformationSection = styled.section<Props>`
   width: 100%;
   padding: 40px 0;
-  background: ${props => props.background};
+  background: ${(props) => props.background};
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -70,7 +70,11 @@ export const InformationSection = styled.section<Props>`
     max-width: 50%;
   }
 
-  h1, h2, h3, p, img {
+  h1,
+  h2,
+  h3,
+  p,
+  img {
     margin: 0 15px;
   }
 `;

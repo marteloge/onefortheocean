@@ -9,18 +9,18 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: "ts-loader",
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js", ".css"]
+    extensions: [".tsx", ".ts", ".js", ".css"],
   },
   output: {
     filename: "index.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
   },
   devServer: {
     historyApiFallback: true,
-  }
+  },
 };
