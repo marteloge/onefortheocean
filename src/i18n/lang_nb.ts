@@ -16,4 +16,6 @@ export default {
   'route.gratitude.title': 'Takk!',
   'language.name.en': 'English',
   'language.name.nb': 'Norsk',
+  'language.name.fr': 'Français',
+  'language.name.es': 'Español',
 };

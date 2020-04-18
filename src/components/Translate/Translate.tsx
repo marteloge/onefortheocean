@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SupportedLanguage, getMessage } from '../../i18n';
-import { StyledTranslateSelect } from './Translate.styled';
+import { StyledTranslation, StyledButton } from './Translate.styled';
 
 type Props = {
   locale: SupportedLanguage;
@@ -11,17 +11,21 @@ type Props = {
 };
 
 const Translate = (props: Props) => (
-  <StyledTranslateSelect
-    open={props.open}
-    defaultValue={props.locale}
-    onChange={(e) => props.setLocale(e.target.value.toString())}
-  >
-    {props.languages.map((item: string) => (
-      <option key={item} value={item}>
+  <StyledTranslation open={props.open}>
+    <img
+      src="../../../assets/images/global.svg"
+      className="icon icon-globe"
+    ></img>
+    {props.languages.map((item: string, index: number) => (
+      <StyledButton
+        selected={props.locale === item}
+        key={index}
+        onClick={() => props.setLocale(item)}
+      >
         {getMessage(props.locale, `language.name.${item}`)}
-      </option>
+      </StyledButton>
     ))}
-  </StyledTranslateSelect>
+  </StyledTranslation>
 );
 
 export default Translate;

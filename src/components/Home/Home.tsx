@@ -1,13 +1,13 @@
-import React from "react";
-import { FormattedMessage } from "react-intl";
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
-import { colors } from "../../global";
+import { colors } from '../../global';
 import {
   StyledHome,
   ImageTile,
   ImageSection,
   InformationSection,
-} from "./Home.styled";
+} from './Home.styled';
 
 export const Home = () => (
   <StyledHome>
