@@ -9,7 +9,7 @@ import {
   InformationSection,
 } from './Home.styled';
 
-export const Home = () => (
+const Home = () => (
   <StyledHome>
     <InformationSection background={colors.skyblue}>
       <h1>
@@ -117,3 +117,5 @@ export const Home = () => (
     </InformationSection>
   </StyledHome>
 );
+
+export default Home;

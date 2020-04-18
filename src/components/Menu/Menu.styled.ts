@@ -16,12 +16,12 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   flex-direction: column;
   z-index: 1;
 
+  transition: transform 0.3s ease-in-out;
+  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
+
   @media (max-width: 600px) {
     width: 100%;
   }
-
-  transition: transform 0.3s ease-in-out;
-  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
 `;
 
 export const StyledLink = styled(NavLink)`

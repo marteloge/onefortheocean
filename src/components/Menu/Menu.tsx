@@ -10,7 +10,7 @@ export type Props = {
   locale: SupportedLanguage;
 };
 
-export const Menu = (props: Props) => {
+const Menu = (props: Props) => {
   return (
     <StyledMenu open={props.open}>
       <StyledLink to="/" exact={true}>
@@ -28,3 +28,5 @@ export const Menu = (props: Props) => {
     </StyledMenu>
   );
 };
+
+export default Menu;

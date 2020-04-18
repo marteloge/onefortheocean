@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { calculateResponsiveSize } from "../../global";
+import { calculateResponsiveSize } from '../../global';
 type Props = {
   background: string;
 };

@@ -42,8 +42,6 @@ export const StyledBurger = styled.button<{ open: boolean }>`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
-    background-color: white;
-
     background-color: ${({ open }) =>
       open ? colors.pearl : colors.mediumblue};
 

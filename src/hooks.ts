@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, RefObject } from 'react';
 
 export function useLocalStorage<T>(
   key: string,
@@ -24,3 +24,26 @@ export function useLocalStorage<T>(
 
   return [storedValue, setValue];
 }
+
+export const useOnClickOutside = (
+  ref: RefObject<HTMLDivElement>,
+  closeMenu: () => void
+) => {
+  useEffect(() => {
+    const listener = (event: MouseEvent) => {
+      if (
+        ref.current &&
+        event.target &&
+        ref.current.contains(event.target as Node)
+      ) {
+        return;
+      }
+      closeMenu();
+    };
+
+    document.addEventListener('mousedown', listener);
+    return () => {
+      document.removeEventListener('mousedown', listener);
+    };
+  }, [ref, closeMenu]);
+};
