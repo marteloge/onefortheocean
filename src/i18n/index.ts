@@ -8,6 +8,9 @@ export const languages = {
 
 export type SupportedLanguage = 'nb' | 'en';
 
-export const getMessage = (
+export const getMessages = (
   locale: SupportedLanguage
 ): { [key: string]: string } => languages[locale];
+
+export const getMessage = (locale: SupportedLanguage, key: string): string =>
+  getMessages(locale)[key];

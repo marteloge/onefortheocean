@@ -15,4 +15,6 @@ export default {
   'route.contact.title': 'Contact',
   'route.about.title': 'About us',
   'route.gratitude.title': 'Attributes',
+  'language.name.en': 'English',
+  'language.name.nb': 'Norsk',
 };

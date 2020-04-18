@@ -14,4 +14,6 @@ export default {
   'route.contact.title': 'Kontakt',
   'route.about.title': 'Om oss',
   'route.gratitude.title': 'Takk!',
+  'language.name.en': 'English',
+  'language.name.nb': 'Norsk',
 };
