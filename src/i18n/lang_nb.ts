@@ -18,4 +18,14 @@ export default {
   'language.name.nb': 'Norsk',
   'language.name.fr': 'Français',
   'language.name.es': 'Español',
+  'gratitude.header': 'Takk!',
+  'gratitude.intro':
+    'Vi vil gjerne vise vår takknemlighet til kunstnerne og teknologene der ute som bruker tid på å lage' +
+    'innhold og teknologi gratis og tilgjengelig for alle. Vi har tatt i bruk gratis rammeverk for å lage siden,' +
+    'content for others to use for free. We have used open sourced technology as well as' +
+    'samt gratis grafikk fra flaticon fra forskjellige artister.',
+  'gratitude.artists.header': 'Thanks to graphic artists',
+  'gratitude.technology.header': 'Thanks to all tech stars',
+  'contact.header': 'Contact',
+  'contact.into': 'Do you have any questions? Please ask!',
 };

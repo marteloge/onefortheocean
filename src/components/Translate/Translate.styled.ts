@@ -18,6 +18,10 @@ export const StyledTranslation = styled.div<{ open: boolean }>`
     max-width: ${calculateResponsiveSize(24, 30)};
   }
 
+  @media (max-width: 900px) {
+    width: 40vw;
+  }
+
   @media (max-width: 600px) {
     width: 100%;
     padding: 0;

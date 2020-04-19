@@ -11,12 +11,21 @@ export default {
   'information.section.recycle.paragraph':
     '#1 Go out to get some fresh air #2 Bring a bag' +
     ' #3 Fill your bag with garbage #4 Keep distance!',
-  'route.home.title': 'Home',
+  'route.home.title': 'Accueil',
   'route.contact.title': 'Contact',
-  'route.about.title': 'About us',
-  'route.gratitude.title': 'Attributes',
+  'route.about.title': 'À propos de nous',
+  'route.gratitude.title': 'Remerciements',
   'language.name.en': 'English',
   'language.name.nb': 'Norsk',
   'language.name.fr': 'Français',
   'language.name.es': 'Español',
+  'gratitude.header': 'Remerciements',
+  'gratitude.intro':
+    'We want to express our gratitude to those who spend time making' +
+    'content for others to use for free. We have used open sourced technology as well as' +
+    'free icons from flaticon.',
+  'gratitude.artists.header': 'Thanks to graphic artists',
+  'gratitude.technology.header': 'Thanks to all tech stars',
+  'contact.header': 'Contact',
+  'contact.intro': 'Do you have any questions? Please ask!',
 };
