@@ -1,10 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 
 import { getMessages, SupportedLanguage } from './i18n';
-import { useLocalStorage, useOnClickOutside } from './hooks';
+import { useLocalStorage } from './hooks';
 import { GlobalStyle } from './global';
 
 import Menu from './components/Menu/Menu';
@@ -16,9 +16,6 @@ import About from './components/About/About';
 const App = () => {
   const [locale, setLocale] = useLocalStorage<SupportedLanguage>('lang', 'en');
   const [open, setOpen] = useState<boolean>(false);
-  const node = useRef<HTMLDivElement>(null);
-
-  useOnClickOutside(node, () => setOpen(false));
 
   return (
     <Router>
@@ -30,9 +27,7 @@ const App = () => {
           <Route path="/contact" component={Contact} />
           <Route path="/thanks" component={Gratitude} />
         </Switch>
-
         <Menu
-          ref={node}
           open={open}
           locale={locale}
           setLocale={setLocale}

@@ -11,9 +11,11 @@ export const StyledHome = styled.div`
   grid-template-rows: auto;
   justify-content: center;
   row-gap: 10px;
+  margin: 10px 0;
 
   @media (max-width: 600px) {
     grid-template-columns: 100%;
+    margin: 0;
   }
 `;
 
