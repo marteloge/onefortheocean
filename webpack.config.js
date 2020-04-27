@@ -21,7 +21,7 @@ module.exports = (env) => {
       extensions: ['.tsx', '.ts', '.js', '.css'],
     },
     output: {
-      filename: 'index.js',
+      filename: 'index.html',
       path: path.resolve(__dirname, 'dist'),
     },
     devServer: {
