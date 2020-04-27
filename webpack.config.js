@@ -28,6 +28,6 @@ module.exports = (env) => {
     devServer: {
       historyApiFallback: true,
     },
-    plugins: [new HtmlWebpackPlugin()],
+    plugins: [new HtmlWebpackPlugin({ template: 'index.html' })],
   };
 };
