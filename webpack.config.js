@@ -1,4 +1,5 @@
 const path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
   const isProd = !!(env && env.production);
@@ -27,5 +28,6 @@ module.exports = (env) => {
     devServer: {
       historyApiFallback: true,
     },
+    plugins: [new HtmlWebpackPlugin()],
   };
 };
