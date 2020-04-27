@@ -33,7 +33,8 @@
     "node-sass": "^4.13.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "build": "webpack --config webpack.config.js --env.production"
   },
   "prettier": {
     "singleQuote": true
