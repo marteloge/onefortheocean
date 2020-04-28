@@ -1,5 +1,6 @@
 const path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (env) => {
   const isProd = !!(env && env.production);
@@ -37,6 +38,9 @@ module.exports = (env) => {
       historyApiFallback: true,
       hot: true,
     },
-    plugins: [new HtmlWebpackPlugin({ template: 'index.html' })],
+    plugins: [
+      new HtmlWebpackPlugin({ template: 'index.html' }),
+      new CopyPlugin([{ from: 'assets', to: 'assets' }]),
+    ],
   };
 };

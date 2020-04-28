@@ -19,16 +19,16 @@ const Home = () => (
 
     <ImageSection>
       <ImageTile background={colors.peach}>
-        <img src="./../../public/assets/images/coral.png" alt=""></img>
+        <img src="./../assets/images/coral.png" alt=""></img>
       </ImageTile>
       <ImageTile background={colors.mediumblue}>
-        <img src="./../../public/assets/images/whale2.png" alt=""></img>
+        <img src="./../assets/images/whale2.png" alt=""></img>
       </ImageTile>
       <ImageTile background={colors.mediumgreen}>
-        <img src="./../../public/assets/images/turtle.png" alt=""></img>
+        <img src="./../assets/images/turtle.png" alt=""></img>
       </ImageTile>
       <ImageTile background={colors.mediumyellow}>
-        <img src="./../../public/assets/images/seahorse.png" alt=""></img>
+        <img src="./../assets/images/seahorse.png" alt=""></img>
       </ImageTile>
     </ImageSection>
 
