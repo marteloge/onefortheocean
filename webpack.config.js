@@ -16,6 +16,14 @@ module.exports = (env) => {
           use: 'ts-loader',
           exclude: /node_modules/,
         },
+        {
+          test: /\.(png|jpe?g|gif)$/i,
+          use: [
+            {
+              loader: 'file-loader',
+            },
+          ],
+        },
       ],
     },
     resolve: {
@@ -27,6 +35,7 @@ module.exports = (env) => {
     },
     devServer: {
       historyApiFallback: true,
+      hot: true,
     },
     plugins: [new HtmlWebpackPlugin({ template: 'index.html' })],
   };
