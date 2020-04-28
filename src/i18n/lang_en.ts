@@ -28,4 +28,5 @@ export default {
   'gratitude.technology.header': 'Thanks to all tech stars',
   'contact.header': 'Contact',
   'contact.intro': 'Do you have any questions? Please ask!',
+  'about.header': 'About',
 };
