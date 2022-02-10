@@ -34,7 +34,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   },
   "scripts": {
     "start": "webpack-dev-server --open",
